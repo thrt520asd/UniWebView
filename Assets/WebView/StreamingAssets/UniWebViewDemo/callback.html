@@ -1,0 +1,61 @@
+<html><head>
+    <title>Local Page</title>
+
+    <meta charset="utf-8">
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type="text/css">
+    body {
+        background-color: #f0f0f2;
+        margin: 0;
+        padding: 0;
+        font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+        
+    }
+    div {
+        width: 250px;
+        margin: 0.5em auto;
+        padding: 20px;
+        background-color: #fff;
+        border-radius: 1em;
+        border:1px solid #27AE60;
+    }
+    a:link, a:visited {
+        color: #27AE60;
+        text-decoration: none;
+    }
+    @media (max-width: 250px) {
+        body {
+            background-color: #fff;
+        }
+        div {
+            width: auto;
+            margin: 0 auto;
+            border-radius: 0;
+            padding: 1em;
+        }
+    }
+    </style>    
+</head>
+
+<body>
+<div>
+    <h1>Adder</h1>
+    <form>
+        Number 1:<input type="text" id="num1"><br>
+        +<br>
+        Number 2:<input type="text" id="num2">
+    </form>
+    <a onclick="add()" href="#">Show me the result in Unity</a><br><br>
+    <a href="uniwebview://close">Close</a>
+</div>
+
+<script type="text/javascript">
+function add() {
+    var num1 = document.getElementById("num1").value;
+    var num2 = document.getElementById("num2").value;
+    window.location.href = "uniwebview://add?num1=" + num1 + "&num2=" + num2;
+}
+</script>
+
+</body></html>
